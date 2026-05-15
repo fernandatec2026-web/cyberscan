@@ -1,0 +1,80 @@
+
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>CyberScan AI - Dashboard de Segurança</title>
+    </head>
+    <body style="font-family: Arial, sans-serif; background-color: #f4f6f9; margin: 0; padding: 20px;">
+        <div style="max-width: 1100px; margin: 40px auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <h1 style="color: #2c3e50; margin: 0;">CyberScan AI</h1>
+            <p style="color: #7f8c8d;">Painel Consolidado de Riscos de Código e Cadeia de Suprimentos (SAST & SCA)</p>
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+            
+            <!-- Caixa de Inteligência Artificial -->
+            <div style="background: #efe6f7; border-left: 4px solid #8e44ad; padding: 18px; margin-bottom: 30px; border-radius: 4px;">
+                <strong style="color: #8e44ad; font-size: 16px;">🤖 Resumo Executivo CyberScan AI:</strong>
+                <p style="margin: 8px 0 0 0; color: #2c3e50; line-height: 1.5; font-style: italic;">Análise de IA indisponível: Configure a variável de ambiente OPENAI_API_KEY.</p>
+            </div>
+
+            <h2 style="color: #c0392b;">1. Segredos e Credenciais Expostas</h2>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 40px;">
+                <thead>
+                    <tr style="background-color: #2c3e50; color: white; text-align: left;">
+                        <th style="padding: 12px;">Arquivo</th>
+                        <th style="padding: 12px; text-align: center;">Severidade</th>
+                        <th style="padding: 12px;">Descrição</th>
+                        <th style="padding: 12px; text-align: center;">Linha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+            <tr>
+                <td style="padding: 12px; border-bottom: 1px solid #ddd; font-family: monospace;">./scanner/test.py</td>
+                <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="background: #ffcccc; color: #cc0000; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 12px;">CRÍTICO</span></td>
+                <td style="padding: 12px; border-bottom: 1px solid #ddd;">Vazamento de Generic API Key</td>
+                <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">1</td>
+            </tr>
+            
+            <tr>
+                <td style="padding: 12px; border-bottom: 1px solid #ddd; font-family: monospace;">./scanner/secrets_scan.py</td>
+                <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="background: #ffcccc; color: #cc0000; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 12px;">CRÍTICO</span></td>
+                <td style="padding: 12px; border-bottom: 1px solid #ddd;">Vazamento de RSA Private Key</td>
+                <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">13</td>
+            </tr>
+            
+                </tbody>
+            </table>
+
+            <h2 style="color: #d35400;">2. Vulnerabilidades em Dependências (SCA)</h2>
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="background-color: #2c3e50; color: white; text-align: left;">
+                        <th style="padding: 12px;">Componente</th>
+                        <th style="padding: 12px; text-align: center;">Severidade</th>
+                        <th style="padding: 12px;">Análise Técnica</th>
+                        <th style="padding: 12px; text-align: center;">Linha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; font-family: monospace;">flask (v2.0.0)</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="background: #fff3cd; color: #856404; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 12px;">ALTA</span></td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>CVE-2023-30861</strong> - Prevenção inadequada de vazamento de sessão.</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">1</td>
+        </tr>
+        
+        <tr>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; font-family: monospace;">requests (v2.26.0)</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;"><span style="background: #fff3cd; color: #856404; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 12px;">MÉDIA</span></td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd;"><strong>CVE-2023-32681</strong> - Vazamento de credenciais via cabeçalho Authorization em redirecionamentos HTTPS.</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">2</td>
+        </tr>
+        
+                </tbody>
+            </table>
+        </div>
+    </body>
+    </html>
+    
