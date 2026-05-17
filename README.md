@@ -1,4 +1,4 @@
-# CyberScan Network Scanner
+# CyberScan Security Analyzer
 
 CyberScan is a Python-based security analysis tool focused on detecting exposed secrets, API keys, and insecure patterns in source code repositories.
 
@@ -8,14 +8,14 @@ CyberScan is a Python-based security analysis tool focused on detecting exposed 
 - GitHub token exposure scanning
 - API key identification
 - Source code analysis
-- Security automation
+- DevSecOps automation
 
 ## Technologies
 
 - Python 3
 - Regex
-- OS Module
-- Security Automation
+- Python OS Module
+- DevSecOps Automation
 
 ## Installation
 
